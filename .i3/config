@@ -29,6 +29,8 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec urxvt
 
+exec --no-startup-id fcitx
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -419,3 +421,4 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+exec --no-startup-id feh --bg-scale $HOME/Pictures/wallpaper.png
