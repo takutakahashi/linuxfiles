@@ -4,3 +4,7 @@ compton
 fcitx-im
 fcitx-configtool
 fcitx-mozc
+tmux
+docker
+docker-compose
+
