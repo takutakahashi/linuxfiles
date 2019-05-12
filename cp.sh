@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cp -f config/$1 $1
+cp -f config/`hostname`$1 $1
