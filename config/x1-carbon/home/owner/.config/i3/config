@@ -2,7 +2,7 @@ set $mod Mod4
 
 #### startup application ####
 
-exec --no-startup-id fcitx
+exec --no-startup-id fcitx-autostart
 exec_always --no-startup-id xset r rate 210 40
 exec_always --no-startup-id xmodmap ~/.Xmodmap
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/
@@ -24,8 +24,8 @@ floating_modifier $mod
 
 bindsym $mod+Return exec urxvt
 bindsym $mod+Delete exec off
-bindsym $mod+F5 exec xbacklight -dec 1
-bindsym $mod+F6 exec xbacklight -inc 1
+bindsym $mod+F5 exec xbacklight -dec 5
+bindsym $mod+F6 exec xbacklight -inc 5
 
 # Window kill command
 bindsym $mod+Shift+q kill
