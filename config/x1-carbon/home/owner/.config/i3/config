@@ -6,8 +6,10 @@ exec --no-startup-id fcitx-autostart
 exec_always --no-startup-id xset r rate 210 40
 exec_always --no-startup-id xmodmap ~/.Xmodmap
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/
-exec --no-startup-id pulseaudio --start
-
+exec --no-startup-id feh --recursive --randomize --bg-fill
+exec --no-startup-id xinput set-prop 12 306 0.9
+exec --no-startup-id xinput set-prop 11 294 1
+exec --no-startup-id ulauncher
 
 new_window pixel 1
 new_float normal
@@ -22,7 +24,7 @@ font xft:URWGothic-Book 11
 
 floating_modifier $mod
 
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec urxvt -e bash -c "tmux a || tmux"
 bindsym $mod+Delete exec off
 bindsym $mod+F5 exec xbacklight -dec 5
 bindsym $mod+F6 exec xbacklight -inc 5
@@ -31,7 +33,10 @@ bindsym $mod+F6 exec xbacklight -inc 5
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+d exec --no-startup-id ulauncher-toggle
+
+# change background
+bindsym Insert exec --no-startup-id chbg
 
 # change focus
 bindsym $mod+h focus left
